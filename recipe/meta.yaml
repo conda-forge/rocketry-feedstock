@@ -1,5 +1,5 @@
 {% set name = "rocketry" %}
-{% set version = "2.1.1" %}
+{% set version = "2.1.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/rocketry-{{ version }}.tar.gz
-  sha256: a26297bedb3abefe4171b8fb199e2f355f3225cd77f018625af910bb2eaeedd1
+  sha256: 4cb5421743ff1cc56390efb8c97f8df9b58d4d69d68f51832a7542a2c8a4f23d
 
 build:
   noarch: python
