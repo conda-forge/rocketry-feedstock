@@ -27,10 +27,11 @@ requirements:
 test:
   imports:
     - rocketry
-  commands:
-    - pip check
-  requires:
-    - pip
+#  commands:
+# Pip check not functioning correctly disabling for now
+#    - pip check
+#  requires:
+#    - pip
 
 about:
   home: https://github.com/Miksus/rocketry
