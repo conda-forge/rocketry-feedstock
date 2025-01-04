@@ -6,25 +6,28 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/rocketry-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/rocketry-{{ version }}.tar.gz
   sha256: 11d1fb3d2856c5b2727bb4814c4f2bfbd2803067eebeac872d34a4c7a6756825
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python {{ python_min }}
+    - setuptools
   run:
     - pydantic
-    - python >=3.7
+    - python >={{ python_min }}
     - python-dateutil
     - redbird >=0.5.0
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - rocketry
 #  commands:
